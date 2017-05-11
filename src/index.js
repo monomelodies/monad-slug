@@ -24,18 +24,12 @@ export default () => {
         link: (scope, elem, attrs, ctrl) => {
             elem.attr('pattern', "[a-z0-9-]{1,255}");
             if (attrs.moSlug.length) {
-                scope.$watch('source', (newvalue, oldvalue) => {
-                    scope.target = makeSlug(newvalue);
-                });
+                scope.$watch('source', (newvalue, oldvalue) => scope.target = makeSlug(newvalue));
             }
-            ctrl.$parsers.unshift(value => {
-                value = makeSlug(value);
-                return value;
-            });
+            ctrl.$parsers.unshift(value => makeSlug(value));
             ctrl.$formatters.unshift(value => {
                 ctrl.$setValidity('moSlug', true);
-                value = makeSlug(value);
-                return value;
+                return makeSlug(value);
             });
             elem.bind('keyup', () => scope.target = makeSlug(elem.val()));
             elem.bind('blur change', () => {
