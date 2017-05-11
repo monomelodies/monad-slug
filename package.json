@@ -20,5 +20,19 @@
   "bugs": {
     "url": "https://github.com/monomelodies/monad-slug/issues"
   },
-  "homepage": "https://github.com/monomelodies/monad-slug#readme"
+  "homepage": "https://github.com/monomelodies/monad-slug#readme",
+  "devDependencies": {
+    "angular": "^1.6.4",
+    "grunt": "^1.0.1",
+    "grunt-browserify": "^5.0.0",
+    "grunt-contrib-uglify": "^2.3.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-shell": "^2.1.0",
+    "jasmine-core": "^2.6.1",
+    "karma": "^1.7.0",
+    "karma-babel-preprocessor": "^6.0.1",
+    "karma-jasmine": "^1.1.0",
+    "karma-phantomjs-launcher": "^1.0.4",
+    "phantomjs-prebuilt": "^2.1.14"
+  }
 }
