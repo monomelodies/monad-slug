@@ -20,7 +20,7 @@ export default () => {
     return {
         restrict: 'A',
         require: 'ngModel',
-        scope: {source: '=moSlug', target: '=ngModel'},
+        scope: {source: '=monadSlug', target: '=ngModel'},
         link: (scope, elem, attrs, ctrl) => {
             elem.attr('pattern', "[a-z0-9-]{1,255}");
             if (attrs.moSlug.length) {
@@ -28,7 +28,7 @@ export default () => {
             }
             ctrl.$parsers.unshift(value => makeSlug(value));
             ctrl.$formatters.unshift(value => {
-                ctrl.$setValidity('moSlug', true);
+                ctrl.$setValidity('monadSlug', true);
                 return makeSlug(value);
             });
             elem.bind('keyup', () => scope.target = makeSlug(elem.val()));
