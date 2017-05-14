@@ -16,8 +16,8 @@ function makeSlug(str) {
     return str;
 };
 
-export default () => {
-    return {
+export default angular.module('monad.slug', ['monad-cms'])
+    .directive('monadSlug', () => ({
         restrict: 'A',
         require: 'ngModel',
         scope: {source: '=monadSlug', target: '=ngModel'},
@@ -37,6 +37,6 @@ export default () => {
                 elem.val(scope.target);
             });
         }
-    };
-};
+    }))
+    .name;
 
