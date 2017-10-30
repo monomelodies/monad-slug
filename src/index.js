@@ -9,7 +9,7 @@ function makeSlug(str) {
         str = str.normalize('NFKD').replace(/[\u0300-\u036F]/g, "");
     }
     str = str.toLowerCase().replace(/\s+/g, '-');
-    str = str.replace(/[^a-z0-9-]+/g, '-');
+    str = str.replace(/[^A-Za-z0-9-]+/g, '-');
     str = str.replace(/-{2,}/g, '-');
     str = str.replace(/^-/, '');
     str = str.replace(/-$/, '');
