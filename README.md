@@ -12,7 +12,7 @@ the following blog post:
 ...we would need to generate this slug for SEO-friendly links:
 
 ```html
-<a href="/my-awesome/blog/">My awesome blog!</a>
+<a href="/my-awesome-blog/">My awesome blog!</a>
 ```
 
 This plugin automates that process for you, optionally allowing the author to
