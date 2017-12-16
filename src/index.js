@@ -1,6 +1,8 @@
 
 "use strict";
 
+import monadCms from 'monad-cms';
+
 function makeSlug(str) {
     if (!str) {
         return str;
@@ -16,7 +18,7 @@ function makeSlug(str) {
     return str;
 };
 
-export default angular.module('monad.slug', ['monad-cms'])
+export default angular.module('monad.slug', [monadCms])
     .directive('monadSlug', () => ({
         restrict: 'A',
         require: 'ngModel',
