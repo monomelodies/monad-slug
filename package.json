@@ -1,6 +1,6 @@
 {
   "name": "monad-slug",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Support for slug fields for Monad CMS",
   "main": "./lib/index.js",
   "files": [
