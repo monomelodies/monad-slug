@@ -23,7 +23,7 @@ export default angular.module('monad.slug', ['monad-cms'])
         scope: {source: '=monadSlug', target: '=ngModel'},
         link: (scope, elem, attrs, ctrl) => {
             elem.attr('pattern', "[a-z0-9-]{1,255}");
-            if (attrs.moSlug.length) {
+            if (attrs.monadSlug.length) {
                 scope.$watch('source', (newvalue, oldvalue) => scope.target = makeSlug(newvalue));
             }
             ctrl.$parsers.unshift(value => makeSlug(value));
